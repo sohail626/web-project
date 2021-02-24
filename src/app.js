@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const path=require("path");
+const port=process.env.PORT||8001
 const hbs=require("hbs")
  var static_Path=path.join(__dirname,"../public")
  var template_Path =path.join(__dirname,"../templates/views");
@@ -29,6 +30,6 @@ app.get("*",(req,res)=>{
     })
     })
 
-app.listen(8001, () => {
+app.listen(port, () => {
     console.log("listning server")
 })
